@@ -1,4 +1,10 @@
+#Implement Trie (Prefix Trie)
+#
+
 class Node:
+    """
+       Every Node has a char, a set of children, and a flag to determine if that char is a word 
+    """
     def __init__(self, char, children, isWord):
         self.char = char
         self.children = children
@@ -8,7 +14,8 @@ class Trie:
 
     def __init__(self):
         """
-        Initialize your data structure here.
+        The trie data structure is essentially just a dummy node holding the each first char of every word that is added
+        in an initial children list
         """
         self.children = {}
         
@@ -16,6 +23,7 @@ class Trie:
     def insert(self, word: str) -> None:
         """
         Inserts a word into the trie.
+        O(n) where n is the length of the word to be inserted
         """
         node = None
         children = self.children
@@ -32,6 +40,7 @@ class Trie:
     def search(self, word: str) -> bool:
         """
         Returns if the word is in the trie.
+        O(n) where n is the length of the word to be searched for
         """
         children = self.children
         node = None
@@ -47,6 +56,10 @@ class Trie:
     def startsWith(self, prefix: str) -> bool:
         """
         Returns if there is any word in the trie that starts with the given prefix.
+        O(N) where n is the length of the prefix.
+        basically checks to see if their are any children in that last node if that char exists in the Trie.
+        if it does not we simply return false, and if it keeps hitting the else statement at the end of the loop
+        we know that their are words in that sub tree
         """
         children = self.children
         for char in prefix:
