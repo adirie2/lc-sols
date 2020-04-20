@@ -1,7 +1,8 @@
 # Runtime 24 ms, faster than 91.6% of submissions
 # Memory less than 7.69% of submissions
 
-# time complexity is O(k)
+# time complexity is O(k^2) ??? will do some more research
+# space complexity is O(K) as it is proportional to the kth row
 
 class Pascal2Solution:
     def getRow(self, rowIndex: int) -> List[int]:
