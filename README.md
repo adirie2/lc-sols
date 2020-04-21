@@ -1,5 +1,5 @@
 # lc-sols
-LeetCode Implementations mostly in Python
+LeetCode Implementations in Python
 
 # Easy
 [208. Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/)\
