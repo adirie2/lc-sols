@@ -29,12 +29,12 @@ def quick_sort(xs: List[int]):
             items_lower.append(item)
     return quick_sort(items_lower) + [pivot] + quick_sort(items_greater)
 
-xs = pseudo_random_gen(10)
-print(xs)
+# xs = pseudo_random_gen(10)
+# print(xs)
 # start = monotonic()
 # insertion_sort(xs)
 # end = monotonic()
 # print(xs)
 # print("time elapsed %f", end-start)
-print(quick_sort(xs))
+# print(quick_sort(xs))
 
